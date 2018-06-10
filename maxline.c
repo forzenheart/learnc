@@ -32,12 +32,11 @@ int getline(char line[], int limit) {
     for (i = 0; i < limit-1 && (EOF != (c = getchar())) && '\n' != c; ++i) {
         line[i] = c;
     }
-
     if (c == '\n') {
         line[i] = c;
         ++i;
     }
-
+    line[i] = '\0';
     return i;
 }
 
